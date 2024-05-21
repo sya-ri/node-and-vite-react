@@ -344,3 +344,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,react,turbo,windows,intellij+all,visualstudiocode,serverless
+
+.esbuild

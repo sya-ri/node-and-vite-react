@@ -1,0 +1,18 @@
+service: backend
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+functions:
+  hello:
+    handler: src/hello.handler
+    events:
+      - httpApi:
+          path: /hello
+          method: get
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline

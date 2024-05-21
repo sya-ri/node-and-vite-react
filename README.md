@@ -4,6 +4,7 @@
 
 ### Apps
 
+- [backend](apps/backend)
 - [frontend](apps/frontend)
 
 ### Packages
