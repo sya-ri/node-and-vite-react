@@ -6,6 +6,7 @@
 
 - [backend](apps/backend)
 - [frontend](apps/frontend)
+- [catalog](apps/catalog)
 
 ### Packages
 
