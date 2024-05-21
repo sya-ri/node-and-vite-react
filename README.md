@@ -1,18 +1,20 @@
 # serverless-and-vite-react
 
+Monorepo with [Turbo](https://turbo.build).
+
 ## Projects
 
 ### Apps
 
-- [backend](apps/backend)
-- [frontend](apps/frontend)
-- [catalog](apps/catalog)
+- [backend](apps/backend): [serverless](https://serverless.com)
+- [frontend](apps/frontend): [Vite](https://vitejs.dev) + React
+- [catalog](apps/catalog): [Storybook](https://storybook.js.org)
 
 ### Packages
 
 - [eslint-config](packages/eslint-config)
 - [typescript-config](packages/typescript-config)
-- [ui](packages/ui)
+- [ui](packages/ui): Component library
 
 ## Scripts
 
