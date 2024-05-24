@@ -2,6 +2,7 @@
   "name": "serverless-and-vite-react",
   "private": true,
   "scripts": {
+    "commit": "git-cz",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
@@ -10,6 +11,7 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "git-cz": "^4.9.0",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },

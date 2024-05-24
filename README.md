@@ -18,6 +18,12 @@ Monorepo with [Turbo](https://turbo.build).
 
 ## Scripts
 
+### Git commit
+
+```shell
+npm run commit
+```
+
 ### Build
 
 ```shell
