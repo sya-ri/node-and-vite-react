@@ -1,8 +1,12 @@
 pre-commit:
   commands:
-    "check code qualities":
+    "check code qualities only biome":
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: npx biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+pre-push:
+  commands:
+    "check code qualities":
+      run: npm run check
 commit-msg:
   commands:
     "lint commit message":
