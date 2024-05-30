@@ -6,12 +6,18 @@ provider:
   runtime: nodejs20.x
 
 functions:
-  hello:
-    handler: src/hello.handler
+  get_todo_list:
+    handler: src/functions/get_todo_list.handler
     events:
       - httpApi:
-          path: /hello
+          path: /todo
           method: get
+  add_todo:
+    handler: src/functions/add_todo.handler
+    events:
+      - httpApi:
+          path: /todo
+          method: post
 
 plugins:
   - serverless-esbuild

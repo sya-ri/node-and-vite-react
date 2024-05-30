@@ -86,7 +86,7 @@ components:
       description: Response schema for adding a new todo
       properties:
         todo:
-          $ref: "#/components/schemas/TodoWithId"
+          $ref: "#/components/schemas/WithId"
       required:
         - todo
     TodoWithId:

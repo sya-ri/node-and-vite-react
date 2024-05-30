@@ -34,7 +34,7 @@ export interface components {
     };
     /** @description Response schema for adding a new todo */
     PostTodoResponse: {
-      todo: components["schemas"]["TodoWithId"];
+      todo: components["schemas"]["WithId"];
     };
     /** @description Todo entity with an ID */
     TodoWithId: components["schemas"]["WithId"] & components["schemas"]["Todo"];

@@ -9,5 +9,8 @@
         "serverless": "3.38.0",
         "serverless-esbuild": "1.52.1",
         "serverless-offline": "13.6.0"
+    },
+    "dependencies": {
+        "@repo/openapi": "*"
     }
 }
