@@ -1,12 +1,12 @@
-# serverless-and-vite-react
+# Serverless and Vite React Monorepo
 
-Monorepo with [Turbo](https://turbo.build).
+A monorepo setup using [Turbo](https://turbo.build).
 
 ## Projects
 
 ### Apps
 
-- [backend](apps/backend): [serverless](https://serverless.com)
+- [backend](apps/backend): [Serverless](https://serverless.com)
 - [frontend](apps/frontend): [Vite](https://vitejs.dev) + React
 - [catalog](apps/catalog): [Storybook](https://storybook.js.org)
 
@@ -17,7 +17,7 @@ Monorepo with [Turbo](https://turbo.build).
 
 ## Scripts
 
-### Git commit
+### Git Commit
 
 ```shell
 npm run commit
@@ -29,20 +29,20 @@ npm run commit
 npm run build
 ```
 
-### Dev
+### Development Server
 
 ```shell
 npm run dev
 ```
 
-### Lint
+### Check Code Quality
 
 ```shell
-npm run lint
+npm run check
 ```
 
-### Format
+### Fix Code Issues
 
 ```shell
-npm run format
+npm run fix
 ```
