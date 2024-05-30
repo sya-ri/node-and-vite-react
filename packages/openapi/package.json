@@ -3,9 +3,11 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "check": "lint-openapi *.yml"
+        "build": "openapi-typescript backend.yml -o backend-schema.ts",
+        "check": "lint-openapi backend.yml"
     },
     "devDependencies": {
-        "ibm-openapi-validator": "1.17.0"
+        "ibm-openapi-validator": "1.17.0",
+        "openapi-typescript": "6.7.6"
     }
 }

@@ -23,11 +23,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/GetTodoResponse"
         "500":
-          description: Internal Server Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+          $ref: "#/components/responses/InternalServerErrorResponse"
     post:
       tags:
         - "Todo"
@@ -48,18 +44,23 @@ paths:
               schema:
                 $ref: "#/components/schemas/PostTodoResponse"
         "400":
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+          $ref: "#/components/responses/BadRequestErrorResponse"
         "500":
-          description: Internal Server Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+          $ref: "#/components/responses/InternalServerErrorResponse"
 components:
+  responses:
+    BadRequestErrorResponse:
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    InternalServerErrorResponse:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
   schemas:
     GetTodoResponse:
       type: object

@@ -20,16 +20,7 @@ module.exports = {
         "scope-enum": [
             2,
             "always",
-            [
-                "apps",
-                "apps/backend",
-                "apps/catalog",
-                "apps/frontend",
-                "packages",
-                "packages/openapi",
-                "packages/config",
-                "packages/ui",
-            ],
+            ["backend", "catalog", "frontend", "openapi", "ui"],
         ],
         "subject-case": [
             2,

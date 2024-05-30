@@ -14,6 +14,11 @@
         }
     },
     "files": {
-        "ignore": [".esbuild/**", "dist/**", ".serverless/**"]
+        "ignore": [
+            ".esbuild/**",
+            "dist/**",
+            ".serverless/**",
+            "./packages/openapi/*-schema.ts"
+        ]
     }
 }
