@@ -17,6 +17,7 @@
         "ignore": [
             ".esbuild/**",
             "dist/**",
+            "storybook-static/**",
             ".serverless/**",
             "./packages/openapi/*-schema.ts"
         ]
