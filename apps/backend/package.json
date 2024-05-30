@@ -1,13 +1,13 @@
 {
-  "name": "backend",
-  "private": true,
-  "scripts": {
-    "dev": "sls offline"
-  },
-  "devDependencies": {
-    "esbuild": "^0.21.3",
-    "serverless": "^3.38.0",
-    "serverless-esbuild": "^1.52.1",
-    "serverless-offline": "^13.5.1"
-  }
+    "name": "backend",
+    "private": true,
+    "scripts": {
+        "dev": "sls offline"
+    },
+    "devDependencies": {
+        "esbuild": "^0.21.3",
+        "serverless": "^3.38.0",
+        "serverless-esbuild": "^1.52.1",
+        "serverless-offline": "^13.5.1"
+    }
 }

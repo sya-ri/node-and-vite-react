@@ -1,8 +1,5 @@
 {
-  "extends": "@repo/typescript-config/vite.json",
-  "include": [
-    "vite.config.ts",
-    "src"
-  ],
-  "exclude": ["node_modules"]
+    "extends": "@repo/typescript-config/vite.json",
+    "include": ["vite.config.ts", "src"],
+    "exclude": ["node_modules"]
 }

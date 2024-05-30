@@ -1,5 +1,5 @@
 export async function handler() {
-  return {
-    message: "Hello World!",
-  };
+    return {
+        message: "Hello World!",
+    };
 }

@@ -12,7 +12,6 @@ Monorepo with [Turbo](https://turbo.build).
 
 ### Packages
 
-- [eslint-config](packages/eslint-config)
 - [typescript-config](packages/typescript-config)
 - [ui](packages/ui): Component library
 
