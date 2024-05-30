@@ -6,7 +6,9 @@
         "commit": "git-cz",
         "build": "turbo build",
         "dev": "turbo dev",
-        "check": "biome check .",
+        "check": "run-p check:*",
+        "check:turbo": "turbo check",
+        "check:biome": "biome check .",
         "fix": "biome check --apply ."
     },
     "devDependencies": {
@@ -16,6 +18,7 @@
         "@repo/typescript-config": "*",
         "git-cz": "4.9.0",
         "lefthook": "1.6.13",
+        "npm-run-all2": "6.2.0",
         "prettier": "3.2.5",
         "turbo": "1.13.3"
     },

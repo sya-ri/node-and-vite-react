@@ -1,0 +1,11 @@
+{
+    "name": "@repo/openapi",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "check": "lint-openapi *.yml"
+    },
+    "devDependencies": {
+        "ibm-openapi-validator": "1.17.0"
+    }
+}

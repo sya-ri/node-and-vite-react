@@ -1,0 +1,127 @@
+openapi: "3.1.0"
+info:
+  title: Backend API
+  version: "1.0"
+servers:
+  - url: "http://localhost:3000"
+tags:
+  - name: "Todo"
+    description: "Operations related to todos"
+paths:
+  /todo:
+    get:
+      tags:
+        - "Todo"
+      summary: "Get todo list"
+      description: Get todo list
+      operationId: "get_todo_list"
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetTodoResponse"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    post:
+      tags:
+        - "Todo"
+      summary: "Add todo"
+      description: Add todo
+      operationId: "add_todo"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PostTodoRequestBody"
+      responses:
+        "200":
+          description: Todo created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PostTodoResponse"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+components:
+  schemas:
+    GetTodoResponse:
+      type: object
+      description: Response schema for getting todo list
+      properties:
+        list:
+          type: array
+          description: "Todo list"
+          items:
+            $ref: "#/components/schemas/TodoWithId"
+      required:
+        - list
+    PostTodoRequestBody:
+      type: object
+      description: Request body schema for adding a new todo
+      properties:
+        todo:
+          $ref: "#/components/schemas/Todo"
+      required:
+        - todo
+    PostTodoResponse:
+      type: object
+      description: Response schema for adding a new todo
+      properties:
+        todo:
+          $ref: "#/components/schemas/TodoWithId"
+      required:
+        - todo
+    TodoWithId:
+      type: object
+      description: Todo entity with an ID
+      allOf:
+        - $ref: "#/components/schemas/WithId"
+        - $ref: "#/components/schemas/Todo"
+    Todo:
+      type: object
+      description: Todo entity without an ID
+      properties:
+        name:
+          type: string
+          description: "Display name"
+          example: "Buy milk"
+      required:
+        - name
+    WithId:
+      type: object
+      description: Schema that includes an ID
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: "Unique id"
+          example: "a6363b15-02e0-4124-9a99-6a1a872acc33"
+      required:
+        - id
+    ErrorResponse:
+      type: object
+      description: Schema for error responses
+      properties:
+        message:
+          type: string
+          description: "Error message"
+          example: "Internal Server Error"
+      required:
+        - message

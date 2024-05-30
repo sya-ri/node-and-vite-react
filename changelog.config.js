@@ -30,6 +30,7 @@ module.exports = {
         "apps/catalog",
         "apps/frontend",
         "packages",
+        "packages/openapi",
         "packages/config",
         "packages/ui",
     ],

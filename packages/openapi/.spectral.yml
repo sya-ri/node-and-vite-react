@@ -1,0 +1,7 @@
+extends: '@ibm-cloud/openapi-ruleset'
+rules:
+  ibm-major-version-in-path: off
+  ibm-success-response-example: off
+  ibm-array-attributes: off
+  ibm-string-attributes: off
+  ibm-error-response-schemas: off

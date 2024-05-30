@@ -6,6 +6,9 @@
             "dependsOn": ["^build"],
             "outputs": ["dist/**", "storybook-static/**"]
         },
+        "check": {
+            "dependsOn": ["^check"]
+        },
         "dev": {
             "cache": false,
             "persistent": true
