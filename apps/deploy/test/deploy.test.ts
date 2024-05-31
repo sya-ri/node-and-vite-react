@@ -1,6 +1,6 @@
+import { Stack } from "@lib/stack";
 import * as cdk from "aws-cdk-lib";
 import { Template } from "aws-cdk-lib/assertions";
-import { Stack } from "../lib/stack";
 
 it("should lambda function created", () => {
     const app = new cdk.App();

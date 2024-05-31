@@ -1,5 +1,8 @@
 {
     "name": "deploy",
+    "bin": {
+        "deploy": "bin/deploy.ts"
+    },
     "scripts": {
         "test": "jest",
         "diff": "cdk diff",
@@ -8,7 +11,6 @@
     },
     "devDependencies": {
         "@repo/typescript-config": "*",
-        "@types/jest": "29.5.12",
         "@types/node": "20.12.13",
         "@types/source-map-support": "0.5.10",
         "aws-cdk": "2.143.1",

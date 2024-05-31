@@ -1,0 +1,20 @@
+{
+    "$schema": "https://unpkg.com/knip@5/schema.json",
+    "workspaces": {
+        ".": {
+            "ignore": ["changelog.config.js"]
+        },
+        "apps/backend": {
+            "entry": ["src/lambda.ts"],
+            "paths": {
+                "@/*": ["src/*"]
+            }
+        },
+        "packages/openapi": {
+            "ignore": ["*.ts"]
+        },
+        "packages/ui": {
+            "entry": ["turbo/generators/config.ts"]
+        }
+    }
+}
