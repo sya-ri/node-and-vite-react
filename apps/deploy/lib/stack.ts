@@ -4,7 +4,7 @@ import * as lambda from "aws-cdk-lib/aws-lambda";
 import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import type { Construct } from "constructs";
 
-export class BackendStack extends cdk.Stack {
+export class Stack extends cdk.Stack {
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
 
@@ -12,7 +12,7 @@ export class BackendStack extends cdk.Stack {
             this,
             "node-and-vite-react-backend-lambda",
             {
-                entry: "src/lambda.ts",
+                entry: "../backend/src/lambda.ts",
                 handler: "handler",
                 runtime: lambda.Runtime.NODEJS_20_X,
             },

@@ -1,33 +1,17 @@
 {
     "name": "backend",
-    "bin": {
-        "backend": "bin/backend.js"
-    },
     "scripts": {
         "build": "tsc",
         "dev": "tsx src/node.ts",
-        "test": "jest",
-        "diff": "cdk diff",
-        "deploy": "cdk deploy",
-        "destroy": "cdk destroy"
+        "test": "jest"
     },
     "devDependencies": {
         "@hono/node-server": "1.11.2",
         "@repo/typescript-config": "*",
-        "@types/jest": "29.5.12",
-        "@types/node": "20.12.13",
-        "@types/source-map-support": "0.5.10",
-        "aws-cdk": "2.143.1",
-        "jest": "29.7.0",
-        "ts-jest": "29.1.4",
-        "ts-node": "10.9.2",
         "tsx": "4.11.0",
         "typescript": "5.4.5"
     },
     "dependencies": {
-        "aws-cdk-lib": "2.143.1",
-        "constructs": "10.3.0",
-        "hono": "4.4.2",
-        "source-map-support": "0.5.21"
+        "hono": "4.4.2"
     }
 }
