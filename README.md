@@ -1,4 +1,4 @@
-# Serverless and Vite React Monorepo
+# Node and Vite React Monorepo
 
 A monorepo setup using [Turbo](https://turbo.build).
 
