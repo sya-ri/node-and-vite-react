@@ -1,0 +1,7 @@
+{
+    "extends": "@repo/typescript-config/hono.json",
+    "compilerOptions": {
+        "outDir": "./dist"
+    },
+    "exclude": ["node_modules", "cdk.out", "dist"]
+}

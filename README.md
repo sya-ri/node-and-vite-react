@@ -6,7 +6,7 @@ A monorepo setup using [Turbo](https://turbo.build).
 
 ### Apps
 
-- [backend](apps/backend): [Serverless](https://serverless.com)
+- [backend](apps/backend): [Hono](https://hono.dev) + AWS Lambda
 - [frontend](apps/frontend): [Vite](https://vitejs.dev) + React
 - [catalog](apps/catalog): [Storybook](https://storybook.js.org)
 

@@ -9,7 +9,8 @@
         "check": "run-p check:*",
         "check:turbo": "turbo check",
         "check:biome": "biome check .",
-        "fix": "biome check --apply ."
+        "fix": "biome check --apply .",
+        "test": "turbo test"
     },
     "devDependencies": {
         "@biomejs/biome": "1.7.3",

@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,linux,macos,react,turbo,windows,serverless,intellij+all,visualstudiocode,storybookjs
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,linux,macos,react,turbo,windows,serverless,intellij+all,visualstudiocode,storybookjs
+# Created by https://www.toptal.com/developers/gitignore/api/node,linux,macos,react,turbo,windows,storybookjs,intellij+all,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,linux,macos,react,turbo,windows,storybookjs,intellij+all,visualstudiocode
 
 ### Intellij+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -290,10 +290,6 @@ psd
 thumb
 sketch
 
-### Serverless ###
-# Ignore build directory
-.serverless
-
 ### StorybookJs ###
 # gitignore template for the Storybook, UI guide for front apps
 # website: https://storybook.js.org/
@@ -349,6 +345,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,react,turbo,windows,serverless,intellij+all,visualstudiocode,storybookjs
-
-.esbuild
+# End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,react,turbo,windows,storybookjs,intellij+all,visualstudiocode
