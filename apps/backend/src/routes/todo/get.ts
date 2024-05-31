@@ -1,16 +1,14 @@
+import { getTodos } from "@/services/todoService.js";
 import type { Route } from "@/utils/route.js";
 import type { ApiResponse } from "@repo/openapi/backend.js";
 
 const get: Route = (app) =>
     app.get("/todo", (c) =>
-        c.json<ApiResponse<"/todo", "get", 200>, 200>({
-            list: [
-                {
-                    id: "4333f432-9232-491b-99b0-804f93dc8952",
-                    name: "Test Name",
-                },
-            ],
-        }),
+        getTodos().then((todos) =>
+            c.json<ApiResponse<"/todo", "get", 200>, 200>({
+                list: todos,
+            }),
+        ),
     );
 
 export default get;

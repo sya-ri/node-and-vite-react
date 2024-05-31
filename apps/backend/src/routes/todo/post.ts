@@ -1,3 +1,4 @@
+import { createTodo } from "@/services/todoService.js";
 import type { Route } from "@/utils/route.js";
 import { validator } from "@/utils/validator.js";
 import type { ApiBody, ApiResponse } from "@repo/openapi/backend.js";
@@ -14,12 +15,13 @@ const post: Route = (app) =>
                 }),
             }),
         ),
-        (c) => {
+        async (c) => {
             const body = c.req.valid("json") satisfies ApiBody<"/todo", "post">;
-            console.info(`Create todo: ${body.todo.name}`);
+            console.info(`Create todo: ${JSON.stringify(body.todo)}`);
+            const todo = await createTodo(body.todo);
             return c.json<ApiResponse<"/todo", "post", 200>, 200>({
                 todo: {
-                    id: "bd6f38ed-f4a4-4c5a-98c4-757a3bb3f65e",
+                    id: todo.id,
                 },
             });
         },
