@@ -22,7 +22,7 @@ A monorepo setup using [Turbo](https://turbo.build).
 To set up the project for development:
 
 ```shell
-npm i
+./scripts/setup.sh
 ```
 
 ## Scripts
