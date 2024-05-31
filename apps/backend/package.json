@@ -1,9 +1,9 @@
 {
     "name": "backend",
+    "type": "module",
     "scripts": {
         "build": "tsc",
-        "dev": "tsx src/node.ts",
-        "test": "jest"
+        "dev": "tsx src/node.ts"
     },
     "devDependencies": {
         "@hono/node-server": "1.11.2",
@@ -12,6 +12,8 @@
         "typescript": "5.4.5"
     },
     "dependencies": {
-        "hono": "4.4.2"
+        "@hono/zod-validator": "0.2.1",
+        "hono": "4.4.2",
+        "zod": "3.23.8"
     }
 }

@@ -34,33 +34,15 @@ export type ApiResponse<
     Path extends ApiPath,
     Method extends ApiMethod<Path>,
     Code extends ApiResponseCode<Path, Method>,
-> = ApiResponseBody<
-    Code,
-    GetNestedValue<
-        paths,
-        [Path, Method, "responses", Code, "content", "application/json"]
-    > extends never
-        ? Record<string, never>
-        : GetNestedValue<
-              paths,
-              [Path, Method, "responses", Code, "content", "application/json"]
-          >
->;
-
-export type ApiResponseBody<Code extends number, Body> = {
-    statusCode: Code;
-    body: Body;
-};
-
-export type ApiResponses<
-    Path extends ApiPath,
-    Method extends ApiMethod<Path>,
-    Codes extends ApiResponseCode<Path, Method>[],
-> = XORResponses<{
-    [K in keyof Codes]: Codes[K] extends ApiResponseCode<Path, Method>
-        ? ApiResponse<Path, Method, Codes[K]>
-        : never;
-}>;
+> = GetNestedValue<
+    paths,
+    [Path, Method, "responses", Code, "content", "application/json"]
+> extends never
+    ? Record<string, never>
+    : GetNestedValue<
+          paths,
+          [Path, Method, "responses", Code, "content", "application/json"]
+      >;
 
 type GetNestedValue<
     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -75,17 +57,3 @@ type GetNestedValue<
               : never
           : never
       : never;
-
-type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never };
-
-type XOR<T, U> = T | U extends object
-    ? (Without<T, U> & U) | (Without<U, T> & T)
-    : T | U;
-
-type XORResponses<TArray extends unknown[]> = TArray extends [
-    infer First,
-    infer Second,
-    ...infer Rest,
-]
-    ? XOR<First, XORResponses<[Second, ...Rest]>>
-    : TArray[0];
