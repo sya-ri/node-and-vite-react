@@ -1,6 +1,7 @@
 {
     "name": "deploy",
     "scripts": {
+        "test": "jest",
         "diff": "cdk diff",
         "deploy": "cdk deploy",
         "destroy": "cdk destroy"

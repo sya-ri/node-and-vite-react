@@ -7,6 +7,6 @@ it("should lambda function created", () => {
     const stack = new Stack(app, "TestStack");
     const template = Template.fromStack(stack);
     template.hasResourceProperties("AWS::Lambda::Function", {
-        Handler: "lambda.handler",
+        Handler: "index.handler",
     });
 });
