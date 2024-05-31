@@ -1,5 +1,5 @@
+import type { Route } from "@/utils/route.js";
 import type { ApiResponse } from "@repo/openapi/backend.js";
-import type { Route } from "../route.js";
 
 const get: Route = (app) =>
     app.get("/todo", (c) =>

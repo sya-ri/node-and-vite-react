@@ -1,4 +1,9 @@
-import type { paths } from "./backend-schema";
+import type { components, paths } from "./backend-schema";
+
+export type ComponentSchemaName = keyof components["schemas"];
+
+export type ComponentSchema<Name extends ComponentSchemaName> =
+    components["schemas"][Name];
 
 export type ApiPath = keyof paths;
 

@@ -1,12 +1,12 @@
-import { zValidator } from "@hono/zod-validator";
+import type { Route } from "@/utils/route.js";
+import { validator } from "@/utils/validator.js";
 import type { ApiBody, ApiResponse } from "@repo/openapi/backend.js";
 import { z } from "zod";
-import type { Route } from "../route.js";
 
 const post: Route = (app) =>
     app.post(
         "/todo",
-        zValidator(
+        validator(
             "json",
             z.object({
                 todo: z.object({
