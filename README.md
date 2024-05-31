@@ -25,7 +25,7 @@ To set up the project for development:
 ./scripts/setup.sh
 ```
 
-## Scripts
+## Commands
 
 ### Git Commit
 
