@@ -18,7 +18,7 @@
             ".esbuild/**",
             "dist/**",
             "storybook-static/**",
-            ".serverless/**",
+            "cdk.out",
             "./packages/openapi/*-schema.ts"
         ]
     }
