@@ -17,6 +17,14 @@ A monorepo setup using [Turbo](https://turbo.build).
 - [openapi](packages/openapi): API documentation.
 - [ui](packages/ui): Shared component library.
 
+## Installation
+
+To set up the project for development:
+
+```shell
+npm i
+```
+
 ## Scripts
 
 ### Git Commit
@@ -57,4 +65,12 @@ To fix any code issues automatically:
 
 ```shell
 npm run fix
+```
+
+### Launch Database
+
+To start the PostgreSQL database using Docker Compose:
+
+```shell
+docker compose up -d
 ```
