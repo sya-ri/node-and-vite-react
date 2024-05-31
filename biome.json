@@ -5,7 +5,8 @@
     },
     "formatter": {
         "indentStyle": "space",
-        "indentWidth": 4
+        "indentWidth": 4,
+        "ignore": ["**/package.json"]
     },
     "linter": {
         "enabled": true,

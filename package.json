@@ -1,6 +1,10 @@
 {
     "name": "serverless-and-vite-reactaa",
     "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
     "scripts": {
         "prepare": "lefthook install",
         "commit": "git-cz",
@@ -9,7 +13,10 @@
         "check": "run-p check:*",
         "check:turbo": "turbo check",
         "check:biome": "biome check .",
-        "fix": "biome check --apply .",
+        "check:package-json": "sort-package-json 'package.json' 'apps/*/package.json' 'packages/*/package.json' --check",
+        "fix": "run-p fix:*",
+        "fix:biome": "biome check --apply .",
+        "fix:package-json": "sort-package-json 'package.json' 'apps/*/package.json' 'packages/*/package.json'",
         "test": "turbo test",
         "knip": "knip"
     },
@@ -23,12 +30,12 @@
         "knip": "5.17.3",
         "lefthook": "1.6.13",
         "npm-run-all2": "6.2.0",
+        "sort-package-json": "2.10.0",
         "turbo": "1.13.3",
         "typescript": "5.4.5"
     },
+    "packageManager": "npm@10.1.0",
     "engines": {
         "node": "20.x"
-    },
-    "packageManager": "npm@10.1.0",
-    "workspaces": ["apps/*", "packages/*"]
+    }
 }
