@@ -1,10 +1,4 @@
 {
     "extends": "@repo/typescript-config/base.json",
-    "compilerOptions": {
-        "baseUrl": "./",
-        "paths": {
-            "@lib/*": ["lib/*"]
-        }
-    },
     "exclude": ["node_modules", "cdk.out"]
 }
