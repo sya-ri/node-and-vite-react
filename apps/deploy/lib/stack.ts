@@ -1,3 +1,4 @@
+import { type RuntimeConfig, RuntimeConfigPath } from "@repo/runtime-config";
 import * as cdk from "aws-cdk-lib";
 import { Duration, RemovalPolicy } from "aws-cdk-lib";
 import * as apiGateway from "aws-cdk-lib/aws-apigateway";
@@ -26,7 +27,7 @@ export class Stack extends cdk.Stack {
         fn.addFunctionUrl({
             authType: lambda.FunctionUrlAuthType.NONE,
         });
-        new apiGateway.LambdaRestApi(
+        const api = new apiGateway.LambdaRestApi(
             this,
             "node-and-vite-react-backend-api-apiGateway",
             {
@@ -43,7 +44,12 @@ export class Stack extends cdk.Stack {
             this,
             "node-and-vite-react-frontend-deploy",
             {
-                sources: [s3Deployment.Source.asset("../frontend/dist")],
+                sources: [
+                    s3Deployment.Source.asset("../frontend/dist"),
+                    s3Deployment.Source.jsonData(RuntimeConfigPath, {
+                        apiUrl: api.url,
+                    } satisfies RuntimeConfig),
+                ],
                 destinationBucket: bucket,
             },
         );
