@@ -47,7 +47,7 @@ export class Stack extends cdk.Stack {
                 destinationBucket: bucket,
             },
         );
-        new cloudfront.Distribution(
+        const distribution = new cloudfront.Distribution(
             this,
             "node-and-vite-react-frontend-distribution",
             {
@@ -67,5 +67,8 @@ export class Stack extends cdk.Stack {
                 ],
             },
         );
+        new cdk.CfnOutput(this, "Frontend URL", {
+            value: `https://${distribution.domainName}`,
+        });
     }
 }
