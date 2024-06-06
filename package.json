@@ -1,5 +1,5 @@
 {
-    "name": "serverless-and-vite-reactaa",
+    "name": "serverless-and-vite-react",
     "private": true,
     "workspaces": [
         "apps/*",

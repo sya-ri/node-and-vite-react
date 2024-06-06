@@ -8,7 +8,6 @@ A monorepo setup using [Turbo](https://turbo.build).
 
 - [backend](apps/backend): Built with [Hono](https://hono.dev) and deployed on AWS Lambda.
 - [frontend](apps/frontend): Built with [Vite](https://vitejs.dev) and React.
-- [catalog](apps/catalog): Utilizes [Storybook](https://storybook.js.org) for UI component development.
 - [deploy](apps/deploy): Deploys to AWS using [AWS CDK](https://github.com/aws/aws-cdk).
 
 ### Packages
