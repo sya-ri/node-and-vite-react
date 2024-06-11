@@ -7,7 +7,7 @@
     },
     "dependencies": {
         "@hono/zod-validator": "0.2.1",
-        "@prisma/client": "5.14.0",
+        "@repo/database": "*",
         "hono": "4.4.2",
         "zod": "3.23.8"
     },
@@ -16,7 +16,6 @@
         "@repo/model": "*",
         "@repo/openapi": "*",
         "@repo/typescript-config": "*",
-        "prisma": "5.14.0",
         "tsx": "4.11.0",
         "typescript": "5.4.5"
     }

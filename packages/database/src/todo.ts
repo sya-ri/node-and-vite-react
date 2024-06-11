@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import type { Id, Todo, TodoWithId } from "@repo/model";
+import type { Todo, TodoWithId } from "@repo/model";
 
 const prisma = new PrismaClient();
 

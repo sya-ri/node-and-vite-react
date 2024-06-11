@@ -11,3 +11,4 @@ npm install
 
 echo "[Setup] Copy environment variable files..."
 cp "$PROJECT_DIR/apps/backend/.env.example" "$PROJECT_DIR/apps/backend/.env"
+cp "$PROJECT_DIR/packages/database/.env.example" "$PROJECT_DIR/packages/database/.env"

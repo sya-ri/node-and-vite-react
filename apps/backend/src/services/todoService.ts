@@ -1,10 +1,10 @@
-import * as repository from "@/repositories/todoRepository.js";
+import * as database from "@repo/database";
 import type { Todo, TodoWithId } from "@repo/model";
 
 export const getTodos = async (): Promise<TodoWithId[]> => {
-    return repository.getTodos();
+    return database.getTodos();
 };
 
 export const createTodo = async (todo: Todo): Promise<TodoWithId> => {
-    return repository.createTodo(todo);
+    return database.createTodo(todo);
 };
