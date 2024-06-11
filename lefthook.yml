@@ -6,7 +6,7 @@ pre-commit:
 pre-push:
   commands:
     "check code qualities":
-      run: npm run check
+      run: TURBO_UI=false npm run check
 commit-msg:
   commands:
     "lint commit message":
