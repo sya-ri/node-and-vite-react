@@ -12,11 +12,12 @@ A monorepo setup using [Turbo](https://turbo.build).
 
 ### Packages
 
-- [model](packages/model): Data model.
-- [openapi](packages/openapi): API documentation.
+- [database](packages/database): Database schema, migrations, and database operations.
+- [model](packages/model): Defines application data models.
+- [openapi](packages/openapi): Provides API documentation using OpenAPI specifications.
 - [runtime-config](packages/runtime-config): Frontend runtime configuration.
-- [typescript-config](packages/typescript-config): TypeScript configuration.
-- [ui](packages/ui): Shared component library.
+- [typescript-config](packages/typescript-config): Shared TypeScript configuration files.
+- [ui](packages/ui): Shared component library for frontend.
 
 ## Installation
 
