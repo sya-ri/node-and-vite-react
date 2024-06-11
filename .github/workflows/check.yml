@@ -5,6 +5,9 @@ on:
       - master
   pull_request:
     types: [opened, synchronize, reopened]
+env:
+  # https://github.com/vercel/turbo/issues/8326
+  TURBO_UI: "false"
 jobs:
   npm-check:
     runs-on: ubuntu-latest
@@ -17,7 +20,25 @@ jobs:
           node-version-file: 'package.json'
       - name: Install dependencies
         run: npm install
-      - name: Check
+      - name: Run npm-check
         run: npm run check
-        env:
-          TURBO_UI: "false"
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
