@@ -68,10 +68,50 @@ To fix any code issues automatically:
 npm run fix
 ```
 
+### Check Dependency Versions
+
+To check for new versions of dependencies using `npm-check-updates`:
+
+```shell
+npm run ncu
+```
+
+### Bump Dependency Versions
+
+To upgrade dependencies to their latest versions using `npm-check-updates`:
+
+```shell
+npm run ncu:apply
+```
+
+### Build Storybook
+
+To build the Storybook:
+
+```shell
+npm run build-storybook
+```
+
+### Open Storybook
+
+To open the storybook:
+
+```shell
+npm run storybook
+```
+
 ### Launch Database
 
 To start the PostgreSQL database using Docker Compose:
 
 ```shell
 docker compose up -d
+```
+
+### Migrate Database
+
+To migrate the database in a development environment:
+
+```shell
+npm run migrate:dev -w packages/database
 ```

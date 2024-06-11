@@ -14,11 +14,15 @@
         "check:turbo": "turbo check",
         "check:biome": "biome check .",
         "check:package-json": "sort-package-json 'package.json' 'apps/*/package.json' 'packages/*/package.json' --check",
+        "check:knip": "knip",
         "fix": "run-p fix:*",
         "fix:biome": "biome check --apply .",
         "fix:package-json": "sort-package-json 'package.json' 'apps/*/package.json' 'packages/*/package.json'",
         "test": "turbo test",
-        "knip": "knip"
+        "ncu": "npx npm-check-updates -ws --root",
+        "ncu:apply": "npx npm-check-updates -ws --root -u",
+        "build-storybook": "turbo build-storybook",
+        "storybook": "turbo storybook"
     },
     "devDependencies": {
         "@biomejs/biome": "1.7.3",

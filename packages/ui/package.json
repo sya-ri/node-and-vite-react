@@ -8,6 +8,7 @@
         "./code": "./src/code.tsx"
     },
     "scripts": {
+        "build-storybook": "storybook build",
         "storybook": "storybook dev -p 6006"
     },
     "devDependencies": {
