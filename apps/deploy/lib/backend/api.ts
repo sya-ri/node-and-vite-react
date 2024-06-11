@@ -6,7 +6,7 @@ import { id } from "../id";
 
 export function backendApi(construct: Construct): apiGateway.LambdaRestApi {
     const fn = new NodejsFunction(construct, id.backend.api.function, {
-        entry: "../backend/src/api.ts",
+        entry: "../backend/src/lambda.ts",
         handler: "handler",
         runtime: lambda.Runtime.NODEJS_20_X,
     });

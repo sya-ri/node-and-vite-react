@@ -20,7 +20,8 @@
             "dist/**",
             "storybook-static/**",
             "cdk.out",
-            "./packages/openapi/*-schema.ts"
+            "./packages/openapi/*-schema.ts",
+            ".turbo/**"
         ]
     }
 }

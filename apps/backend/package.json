@@ -6,9 +6,9 @@
         "dev": "tsx src/node.ts"
     },
     "dependencies": {
-        "@hono/zod-validator": "0.2.1",
+        "@hono/zod-validator": "0.2.2",
         "@repo/database": "*",
-        "hono": "4.4.2",
+        "hono": "4.4.5",
         "zod": "3.23.8"
     },
     "devDependencies": {
@@ -16,7 +16,7 @@
         "@repo/model": "*",
         "@repo/openapi": "*",
         "@repo/typescript-config": "*",
-        "tsx": "4.11.0",
+        "tsx": "4.15.2",
         "typescript": "5.4.5"
     }
 }

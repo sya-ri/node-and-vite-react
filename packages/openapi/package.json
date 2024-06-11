@@ -7,7 +7,7 @@
         "check": "lint-openapi backend.yml"
     },
     "devDependencies": {
-        "ibm-openapi-validator": "1.17.0",
+        "ibm-openapi-validator": "1.18.0",
         "openapi-typescript": "6.7.6"
     }
 }
