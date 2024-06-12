@@ -39,6 +39,8 @@ jobs:
         with:
           node-version-file: 'package.json'
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm run -w packages/database generate
       - name: Build
         run: npm run build
