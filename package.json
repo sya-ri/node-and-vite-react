@@ -40,6 +40,7 @@
         "typescript": "5.4.5"
     },
     "optionalDependencies": {
+        "@biomejs/cli-linux-x64": "1.8.1",
         "lefthook-linux-x64": "1.6.15"
     },
     "packageManager": "npm@10.1.0",
