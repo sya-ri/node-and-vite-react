@@ -39,6 +39,9 @@
         "turbo": "2.0.3",
         "typescript": "5.4.5"
     },
+    "optionalDependencies": {
+        "lefthook-linux-x64": "1.6.15"
+    },
     "packageManager": "npm@10.1.0",
     "engines": {
         "node": "20.x"
