@@ -10,6 +10,9 @@
                 "@/*": ["src/*"]
             }
         },
+        "apps/deploy": {
+            "entry": ["docker/prisma-migrate/index.ts"]
+        },
         "packages/openapi": {
             "ignore": ["*.ts"]
         },

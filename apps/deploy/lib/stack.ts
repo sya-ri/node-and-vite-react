@@ -1,6 +1,7 @@
 import * as cdk from "aws-cdk-lib";
 import type { Construct } from "constructs";
 import { backendApi } from "./backend/api";
+import { database } from "./backend/database";
 import { webpage } from "./frontend/webpage";
 
 export class Stack extends cdk.Stack {
@@ -9,6 +10,7 @@ export class Stack extends cdk.Stack {
 
         // backend --> lambda (nodejs)
         const api = backendApi(this);
+        database(this);
 
         // frontend --> s3
         const distribution = webpage(this, api);
