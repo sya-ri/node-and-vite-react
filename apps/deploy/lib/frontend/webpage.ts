@@ -6,7 +6,7 @@ import * as cloudfrontOrigins from "aws-cdk-lib/aws-cloudfront-origins";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import * as s3Deployment from "aws-cdk-lib/aws-s3-deployment";
 import type { Construct } from "constructs";
-import { id } from "../id";
+import { file, id } from "../config";
 
 export function webpage(
     construct: Construct,
@@ -21,7 +21,7 @@ export function webpage(
         id.frontend.webpage.s3BucketDeploy,
         {
             sources: [
-                s3Deployment.Source.asset("../frontend/dist"),
+                s3Deployment.Source.asset(file.frontend.buildDir),
                 s3Deployment.Source.jsonData(RuntimeConfigPath, {
                     apiUrl: api.url,
                 } satisfies RuntimeConfig),
