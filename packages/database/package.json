@@ -10,10 +10,10 @@
         "migrate:dev": "prisma migrate dev"
     },
     "dependencies": {
-        "@prisma/client": "5.15.0"
+        "@prisma/client": "5.17.0"
     },
     "devDependencies": {
         "@repo/model": "*",
-        "prisma": "5.15.0"
+        "prisma": "5.17.0"
     }
 }
