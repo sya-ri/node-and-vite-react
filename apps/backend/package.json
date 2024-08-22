@@ -8,7 +8,7 @@
     "dependencies": {
         "@hono/zod-validator": "0.2.2",
         "@repo/database": "*",
-        "hono": "4.5.1",
+        "hono": "4.5.8",
         "zod": "3.23.8"
     },
     "devDependencies": {
